@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Impresión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+         <!-- Header -->
+  <header id="header">
+    <div class="container">
+          <!-- Botón menú hamburguesa -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo">OC</div>
+      <nav>
+        <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#portafolio">Servicios</a></li>
+            <li><a href="index.html#vision">Visión y Misión</a></li>
+            <li><a href="index.html#logros">Logros</a></li>
+            <li><a href="index.html#clientes">Clientes</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <section class="services">
+        <div class="section-title">
+            <h2>Técnicas de Impresión</h2>
+            <p>Tecnología avanzada para resultados excepcionales</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-print service-icon"></i>
+                <h3>Impresiones</h3>
+                <p>Servicio completo de impresión digital y offset para todo tipo de materiales y formatos.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-tshirt service-icon"></i>
+                <h3>Impresión DTF Textil y UV</h3>
+                <p>Impresión directa a prendas con tecnología DTF de alta durabilidad y calidad fotográfica.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-fire service-icon"></i>
+                <h3>Grabado Láser</h3>
+                <p>Precisión milimétrica en grabados y cortes láser para diversos materiales y superficies.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-magic service-icon"></i>
+                <h3>Sublimación</h3>
+                <p>Transferencia de diseños a múltiples superficies con colores vibrantes y alta resistencia.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Animación del título
+          setTimeout(() => {
+            const sectionTitle = document.querySelector('.section-title');
+            if(sectionTitle){
+              sectionTitle.style.opacity = '1';
+              sectionTitle.style.transform = 'translateY(0)';
+            }
+          }, 300);
+    
+          // Observer para las tarjetas
+          const cards = document.querySelectorAll('.service-card');
+          const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          }, { threshold: 0.1 });
+          cards.forEach(card => cardObserver.observe(card));
+    
+          // Efecto de "iluminación" al mover el mouse (para dispositivos con mouse)
+          cards.forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              card.style.setProperty('--mouse-x', x + 'px');
+              card.style.setProperty('--mouse-y', y + 'px');
+            });
+          });
+    
+          // Para dispositivos táctiles: simular efecto hover al hacer click en la tarjeta
+          cards.forEach(card => {
+            card.addEventListener('click', function() {
+              card.classList.add('hover-effect');
+              setTimeout(() => {
+                card.classList.remove('hover-effect');
+              }, 300);
+            });
+          });
+    
+          // Barra de progreso (con corrección para evitar error en "scrolled")
+          const scrollProgress = document.querySelector('.scroll-progress');
+          if (scrollProgress) {
+            window.addEventListener('scroll', () => {
+              const scrollTop = window.scrollY || document.documentElement.scrollTop;
+              const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              if (windowHeight > 0) {
+                const scrolled = (scrollTop / windowHeight) * 100;
+                scrollProgress.style.width = `${scrolled}%`;
+              }
+            });
+          }
+    
+          // Año actual en el footer
+          const yearSpan = document.getElementById('current-year');
+          if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+          }
+    
+          // Control de la navbar (ocultar/mostrar al hacer scroll)
+          let lastScroll = 0;
+          const navbar = document.querySelector('#header');
+          window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+              navbar.style.top = '-80px';
+            } else {
+              navbar.style.top = '0';
+            }
+            lastScroll = currentScroll;
+          });
+    
+          // Funcionalidad del menú hamburguesa
+          const hamburger = document.querySelector('.hamburger');
+          const navUl = document.querySelector('nav ul');
+          const navLinks = document.querySelectorAll('nav ul li a');
+    
+          if (hamburger && navUl) {
+            hamburger.addEventListener('click', () => {
+              navUl.classList.toggle('active');
+              hamburger.classList.toggle('open');
+            });
+          }
+    
+          // Cerrar el menú al hacer clic en un enlace
+          if (navLinks) {
+            navLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                navUl.classList.remove('active');
+                hamburger.classList.remove('open');
+              });
+            });
+          }
+        });
+      </script>
+</body>
+</html>

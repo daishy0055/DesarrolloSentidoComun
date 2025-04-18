@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(THIS)</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Fuente para el título -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- CSS extra para evitar que los enlaces alteren el layout -->
+  <style>
+    .service-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="logo-preloader">OC</div>
+      <div class="orbit">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <!-- Logo con fondo opaco en móviles (y se aplica en escritorio si se desea) -->
+      <div class="logo">OC</div>
+      <!-- Línea horizontal negra (no tan larga y responsive) -->
+      <div class="header-line"></div>
+      <!-- Botón de menú hamburguesa (visible en dispositivos móviles) -->
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#portafolio">Servicios</a></li>
+          <li><a href="#vision">Visión y Misión</a></li>
+          <li><a href="#logros">Logros</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <!-- Se actualiza el título completo con el span para resaltar la palabra "Sentido" -->
+      <h1 class="hero-title section-subtitle">Comencemos a dar <span class="highlight">Sentido</span> a tu proyecto</h1>
+    </div>
+    <div class="lines-overlay">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <div class="espaciador"></div>
+
+  <!-- Sección de Servicios -->
+  <section id="portafolio" class="services-section">
+    <div class="services-container">
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <a href="sistemasweb.html" class="service-link">
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="image-container">
+                <img src="img/sistemasweb14.jpg" alt="Sistemas Web">
+              </div>
+              <div class="service-content">
+                <h3></h3>
+                <p></p>
+                <div class="service-hover">
+                  <p>Sistemas Web</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Servicio 2 -->
+        <a href="estudios.html" class="service-link">
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="image-container">
+                <img src="img/estudios1.jpg" alt="Estudios Analíticos">
+              </div>
+              <div class="service-content">
+                <h3></h3>
+                <p></p>
+                <div class="service-hover">
+                  <p>Estudios</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Servicio 3 -->
+        <a href="especiales.html" class="service-link">
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="image-container">
+                <img src="img/especiales1.jpg" alt="Soluciones Móviles">
+              </div>
+              <div class="service-content">
+                <h3></h3>
+                <p></p>
+                <div class="service-hover">
+                  <p>Especiales</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Servicio 4 -->
+        <a href="otros.html" class="service-link">
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="image-container">
+                <img src="img/otros1.jpg" alt="Consultoría Tecnológica">
+              </div>
+              <div class="service-content">
+                <h3></h3>
+                <p></p>
+                <div class="service-hover">
+                  <p>Otros</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Servicio 5: Ciberseguridad -->
+        <a href="ciberseguridad.html" class="service-link">
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="image-container">
+                <img src="img/ciberseguridad1.jpg" alt="Ciberseguridad">
+              </div>
+              <div class="service-content">
+                <h3></h3>
+                <p></p>
+                <div class="service-hover">
+                  <p>Ciberseguridad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador para el scroll -->
+  <div class="espaciador"></div>
+
+  <!-- Sección Parallax 1 - Misión/Visión -->
+  <section class="parallax mission-vision" id="vision">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content compacto">
+      <div class="mission animated-element">
+         <h2>Misión</h2>
+        <p>Asegura las soluciones más eficientes para nuestros clientes, y entablar relaciones de largo plazo.</p> 
+      </div>
+      <div class="vision animated-element">
+         <h2>Visión</h2>
+        <p>Posicionarnos en 10 años como una de las empresas de referencia en el gremio a nivel regional.</p> 
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador para el scroll -->
+  <div class="espaciador"></div>
+
+  <!-- Sección Parallax 2 - Desarrollo -->
+  <section class="parallax desarrollo" id="desarrollo">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content compacto">
+      <div class="texto-principal animated-element">
+        <h2>Desarrollo con Sentido Común</h2>
+        <p>
+          Empresa mexicana nacida en septiembre de 2017 y formalizada legalmente el 25 de mayo de 2018, especializada en elaboración, generación, diseño, definición, programación, producción y/o planeación de estrategias de comunicación, difusión, capacitación y/o educación para entidades públicas y/o privadas.
+        </p> 
+      </div>
+    </div>
+  </section>
+
+  <div class="espaciador"></div>
+
+  <!-- Sección: Logros Profesionales -->
+  <section class="logros-section" id="logros">
+    <!-- Contenedor de partículas (fondo animado) -->
+    <div class="particles-container" id="particles"></div>
+    
+    <h2 class="titulo-principal"><span class="titulo-destacado">Principales</span> Logros</h2>
+    
+    <div class="contenedor-logros">
+      <div class="tarjeta-logro">
+        <i class="fas fa-handshake"></i>
+        <h3>Dar soluciones a nuestros clientes</h3>
+        <p class="descripcion-logro">Implementación de estrategias personalizadas que superan expectativas.</p>
+      </div>
+      
+      <div class="tarjeta-logro">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Innovación en plataformas educativas</h3>
+        <p class="descripcion-logro">Participar de manera activa en opciones de solución en temática educativa con:
+         Plataformas digitales.</p>
+      </div>
+      
+      <div class="tarjeta-logro">
+        <i class="fas fa-tachometer-alt"></i>
+        <h3>Optimización de eficiencia operativa</h3>
+        <p class="descripcion-logro">Generar mayor eficiencia en servicios gracias a los sistemas elaborados.</p>
+      </div>
+      
+      <div class="tarjeta-logro">
+        <i class="fas fa-comments"></i>
+        <h3>Comunicación corporativa efectiva</h3>
+        <p class="descripcion-logro">Mejorar la comunicación interna de las empresas.</p>
+      </div>
+      
+      <div class="tarjeta-logro">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Seguridad informática avanzada</h3>
+        <p class="descripcion-logro">Auditorías de seguridad ética y pruebas de penetración.</p>
+      </div>
+    </div>
+
+    <!-- Contador interno para Logros -->
+    <div class="contador-logros-section">
+      <div class="contador-info">
+        <h3>Proyectos Ejecutados</h3>
+        <div class="contador-logros" data-count="1500">0</div>
+        <div class="barra-progreso">
+          <div class="progreso-logros"></div>
+        </div>
+        <p>Resultados comprobados a nivel global</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Años de Excelencia (Contador) -->
+  <section class="contador-section">
+    <div class="contador-contenedor">
+      <div class="icono-titulo">
+        <i class="fas fa-award"></i>
+        <h2 class="contador-titulo">Años de Experiencia</h2>
+      </div>
+      <div class="contador-excelencia" data-count="7">0</div>
+      <div class="barra-progreso">
+        <div class="progreso-excelencia"></div>
+      </div>
+      <p class="contador-descripcion">Experiencia acumulada en soluciones innovadoras</p>
+    </div>
+  </section>
+
+  <!-- Espaciador final -->
+  <div class="space"></div>
+
+  <!-- Sección de Clientes -->
+  <section class="clients-section" id="clientes">
+    <div class="transition-curtain"></div>
+    <!-- Se ocultó el light-beam para quitar el efecto de brillo -->
+    <div class="light-beam"></div>
+    <h2 class="section-title" data-split-text>Nuestros Clientes</h2>
+    <p class="section-subtitle">Colaboraciones estratégicas</p>
+    
+    <div class="clients-grid">
+      <!-- Cada imagen se coloca en su propio contenedor para la cuadrícula -->
+      <div class="client-logo" data-logo>
+          <img src="img/SANTIAGO.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/CHIHUAHUA.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/IXTLAN.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/CHIHUAHUA.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/COAHUILA.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/TEEN.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/LEON.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/TEPIC.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/DURANGO.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/PACS.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/SECESP.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/ENRED.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+      <div class="client-logo" data-logo>
+          <img src="img/GTO.png" alt="Cliente" loading="lazy">
+          <div class="logo-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón Scroll to Top -->
+  <button id="scrollToTop" title="Ir arriba">↑</button>
+
+
+
+
+<!-- Sección de Contacto Integrada -->
+       <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <!-- Se agregó la clase "animated-element" para que el h2 se revele al 50% -->
+            <h2 class="section-title animated-element">Contacto</h2>
+            <div class="email-container">
+                <a href="mailto:tucorreo@ejemplo.com" class="email-link" id="emailLink">
+                    <svg class="gmail-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 18h-2V9.25L12 13 6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                    </svg>
+                    <span class="email-text">rafaelvargaspasaye@gmail.com</span>
+                    <div class="hover-effect"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+  <!-- Scripts Generales -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Efecto de transición cinematográfica
+      var curtain = document.querySelector('.transition-curtain');
+      window.addEventListener('scroll', function() {
+          var scrollY = window.scrollY;
+          var sectionTop = document.querySelector('.clients-section').offsetTop;
+          var progress = Math.min(1, (scrollY - sectionTop + window.innerHeight) / window.innerHeight);
+          var clipValue = 'polygon(0 0, 100% 0, 100% ' + (100 - (progress * 100)) + '%, 0 ' + (100 - (progress * 100)) + '%)';
+          if (curtain) {
+            curtain.style.clipPath = clipValue;
+            curtain.style.webkitClipPath = clipValue;
+          }
+      });
+
+      // Animación de texto dividido
+      var title = document.querySelector('[data-split-text]');
+      title.innerHTML = title.textContent.split('').map(function(char, i) { 
+          return '<span style="transition-delay: ' + (i * 0.05) + 's">' + char + '</span>';
+      }).join('');
+
+      // Efecto de haz de luz (No se aplica ya que .light-beam está oculto)
+      document.addEventListener('mousemove', function(e) {
+          var beam = document.querySelector('.light-beam');
+          var x = e.clientX / window.innerWidth * 100;
+          var y = e.clientY / window.innerHeight * 100;
+          beam.style.background = 'radial-gradient(at ' + x + '% ' + y + '% , rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%)';
+      });
+
+      // Animación de logos con física realista
+      var logos = document.querySelectorAll('[data-logo]');
+      logos.forEach(function(logo) {
+          var rotation = 0;
+          logo.addEventListener('mousemove', function(e) {
+              var rect = logo.getBoundingClientRect();
+              var x = e.clientX - rect.left - rect.width/2;
+              var y = e.clientY - rect.top - rect.height/2;
+              rotation = Math.sqrt(x*x + y*y) * 0.2;
+              logo.style.transform = 'translateZ(0) rotate3d(' + (y/100) + ', ' + (-x/100) + ', 0, ' + rotation + 'deg) scale(1.05)';
+              logo.querySelector('.logo-overlay').style.opacity = Math.abs(x/50);
+          });
+          logo.addEventListener('mouseleave', function() {
+              logo.style.transform = 'none';
+              logo.querySelector('.logo-overlay').style.opacity = '0';
+          });
+      });
+
+      // Observador de intersección mejorado
+      var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+              if(entry.isIntersecting) {
+                  entry.target.style.transform = 'translateY(0) scale(1)';
+                  entry.target.style.opacity = '1';
+              }
+          });
+      }, { threshold: 0.3, rootMargin: '0px 0px -100px 0px' });
+      logos.forEach(function(logo) { observer.observe(logo); });
+    });
+  </script>
+
+  <!-- Otros scripts (preloader, tilt, scroll to top, animaciones, etc.) se mantienen sin cambios -->
+  <script>
+    // Preloader y animaciones iniciales
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        preloader.classList.add('fade-out');
+        setTimeout(function() { preloader.style.display = 'none'; }, 1000);
+      }, 500);
+      document.querySelector('.hero').classList.add('bg-loaded');
+      document.querySelector('.hero-title').classList.add('animate-text');
+    });
+
+    // Efecto Parallax y botón Scroll to Top
+    window.addEventListener('scroll', function() {
+      var scrolled = window.pageYOffset;
+      document.documentElement.style.setProperty('--parallax', (scrolled * 0.3) + 'px');
+      var scrollBtn = document.getElementById('scrollToTop');
+      if (scrolled > 300) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+
+    // Efecto Tilt en la sección Hero (solo en dispositivos no táctiles)
+    if (!('ontouchstart' in window)) {
+      var hero = document.querySelector('.hero');
+      hero.addEventListener('mousemove', function(e) {
+        var rect = hero.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var tiltX = (x - rect.width / 2) * 0.09;
+        var tiltY = (y - rect.height / 2) * 0.09;
+        hero.style.setProperty('--tiltX', tiltX + 'px');
+        hero.style.setProperty('--tiltY', tiltY + 'px');
+      });
+      hero.addEventListener('mouseleave', function() {
+        hero.style.setProperty('--tiltX', '0px');
+        hero.style.setProperty('--tiltY', '0px');
+      });
+    }
+
+    // Funcionalidad del botón "Scroll to Top"
+    document.getElementById('scrollToTop').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // IntersectionObserver para revelar secciones (elementos generales)
+    var observer2 = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.animated-element').forEach(function(el) {
+      observer2.observe(el);
+    });
+
+    // Efecto 3D en tarjetas de servicio
+    document.querySelectorAll('.service-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+        var centerX = card.offsetWidth / 2;
+        var centerY = card.offsetHeight / 2;
+        card.style.transform = 'perspective(1000px) rotateX(' + ((y - centerY) / -10) + 'deg) rotateY(' + ((x - centerX) / 10) + 'deg) scale(1.05)';
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
+      card.addEventListener('touchmove', function(e) {
+        var touch = e.touches[0];
+        var rect = card.getBoundingClientRect();
+        var x = touch.clientX - rect.left;
+        var y = touch.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+        var centerX = card.offsetWidth / 2;
+        var centerY = card.offsetHeight / 2;
+        card.style.transform = 'perspective(1000px) rotateX(' + ((y - centerY) / -10) + 'deg) rotateY(' + ((x - centerX) / 10) + 'deg) scale(1.05)';
+      }, { passive: true });
+      card.addEventListener('touchend', function() {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+
+    // Animación de entrada para las tarjetas de servicio
+    var servicesSection = document.querySelector('.services-section');
+    var cardsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var cardInners = document.querySelectorAll('.card-inner');
+          cardInners.forEach(function(inner, index) {
+            setTimeout(function() {
+              inner.classList.add('card-enter');
+            }, index * 200);
+          });
+          cardsObserver.unobserve(servicesSection);
+        }
+      });
+    }, { threshold: 0.5 });
+    cardsObserver.observe(servicesSection);
+
+    // Preloader refuerzo
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('preloader').classList.add('loaded');
+      }, 1000);
+    });
+
+    // Animaciones de elementos animados
+    var observer3 = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.25 });
+    document.querySelectorAll('.animated-element').forEach(function(el) {
+      observer3.observe(el);
+    });
+
+    // Scroll suave para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+     
+    //  Sección de Logros
+    
+    function crearParticulas() {
+      var container = document.getElementById('particles');
+      var particleCount = 80;
+      for (var i = 0; i < particleCount; i++) {
+        var particle = document.createElement('div');
+        particle.className = 'particula';
+        particle.style.left = (Math.random() * 100) + '%';
+        particle.style.top = (Math.random() * 100) + '%';
+        particle.style.animationDelay = (Math.random() * 5) + 's';
+        container.appendChild(particle);
+      }
+    }
+
+    function animateCounterLogros() {
+      var counter = document.querySelector('.logros-section .contador-logros');
+      var progressBar = document.querySelector('.logros-section .progreso-logros');
+      var target = parseInt(counter.getAttribute('data-count'));
+      var duration = 3000;
+      var start = null;
+      function easeOutQuad(t) { return t * (2 - t); }
+      function animate(timestamp) {
+        if (!start) { start = timestamp; }
+        var progress = timestamp - start;
+        var percentage = Math.min(progress / duration, 1);
+        var eased = easeOutQuad(percentage);
+        counter.textContent = Math.floor(eased * target);
+        progressBar.style.width = (eased * 100) + '%';
+        if (percentage < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          counter.textContent = target + '+';
+          progressBar.style.width = '100%';
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    function efectoHover3DLogros() {
+      document.querySelectorAll('.logros-section .tarjeta-logro').forEach(function(card) {
+        card.addEventListener('mousemove', function(e) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          var centerX = rect.width / 2;
+          var centerY = rect.height / 2;
+          var rotateX = -((y - centerY) / 15);
+          var rotateY = ((x - centerX) / 15);
+          card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale(1.03)';
+        });
+        card.addEventListener('mouseleave', function() {
+          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+      });
+    }
+
+    function animarTarjetasLogros() {
+      var tarjetas = document.querySelectorAll('.logros-section .tarjeta-logro');
+      tarjetas.forEach(function(tarjeta, index) {
+        setTimeout(function() {
+          tarjeta.style.opacity = '1';
+          tarjeta.style.transform = 'translateY(0)';
+        }, index * 150);
+      });
+    }
+
+    function configurarObserverLogros() {
+      var observerLogros = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            animarTarjetasLogros();
+            animateCounterLogros();
+            entry.target.classList.add('visible');
+            observerLogros.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      var logrosSection = document.querySelector('.logros-section');
+      observerLogros.observe(logrosSection);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      crearParticulas();
+      efectoHover3DLogros();
+      configurarObserverLogros();
+    });
+
+    
+      // Sección Años de Experiencia 
+     
+    function animarContadorExcelencia() {
+      var contador = document.querySelector('.contador-section .contador-excelencia');
+      var barraProgreso = document.querySelector('.contador-section .progreso-excelencia');
+      var objetivo = parseInt(contador.getAttribute('data-count'));
+      var duracion = 2500;
+      var inicio = null;
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+      function animate(timestamp) {
+        if (!inicio) { inicio = timestamp; }
+        var progreso = timestamp - inicio;
+        var porcentaje = Math.min(progreso / duracion, 1);
+        var suavizado = easeOutExpo(porcentaje);
+        contador.textContent = Math.floor(suavizado * objetivo);
+        barraProgreso.style.width = (suavizado * 100) + '%';
+        if (porcentaje < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          contador.textContent = objetivo;
+          barraProgreso.style.width = '100%';
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    var contadorObserverExcelencia = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if(entry.isIntersecting) {
+          animarContadorExcelencia();
+          entry.target.classList.add('visible');
+          contadorObserverExcelencia.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    contadorObserverExcelencia.observe(document.querySelector('.contador-section'));
+  </script>
+  
+  <!-- Nuevo script para el menú hamburguesa responsivo y cierre al hacer clic en un enlace -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var hamburger = document.querySelector('.hamburger');
+      var navUl = document.querySelector('nav ul');
+      var navLinks = document.querySelectorAll('nav ul li a');
+
+      hamburger.addEventListener('click', function() {
+        navUl.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+
+      // Al hacer clic en cada enlace, se cierra el menú
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          navUl.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+  </script>
+  
+  <script>
+      // Animación de revelado del email
+      function animateEmail() {
+          const emailLink = document.getElementById('emailLink');
+          const emailText = emailLink.querySelector('.email-text');
+          const originalText = emailText.textContent;
+          emailText.textContent = '';
+          
+          let i = 0;
+          const animation = setInterval(() => {
+              emailText.textContent += originalText[i];
+              i++;
+              if(i >= originalText.length) clearInterval(animation);
+          }, 50);
+      }
+
+      // Animación al hacer hover
+      document.getElementById('emailLink').addEventListener('mouseover', function() {
+          this.style.transform = 'scale(1.05)';
+          this.querySelector('.hover-effect').style.width = '100%';
+          this.querySelector('.gmail-icon').style.fill = '#2dd4bf';
+      });
+
+      document.getElementById('emailLink').addEventListener('mouseout', function() {
+          this.style.transform = 'scale(1)';
+          this.querySelector('.hover-effect').style.width = '0';
+          this.querySelector('.gmail-icon').style.fill = '#fff';
+      });
+
+      // Iniciar animación del email cuando al menos el 35% del contenedor de contacto sea visible
+      const emailObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if(entry.isIntersecting) {
+                  animateEmail();
+                  // Una vez animado, dejamos de observar
+                  emailObserver.unobserve(entry.target);
+              }
+          });
+      }, { threshold: 0.35 });
+      document.querySelectorAll('.contact-container').forEach((el) => {
+          emailObserver.observe(el);
+      });
+      
+      // Animación al aparecer en el viewport para la sección de contacto (ajustada a 35%)
+      const contactObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if(entry.isIntersecting) {
+                  entry.target.style.opacity = 1;
+                  entry.target.style.transform = 'translateY(0)';
+              }
+          });
+      }, { threshold: 0.35 });
+      document.querySelectorAll('.contact-container').forEach((el) => {
+          contactObserver.observe(el);
+      });
+  </script>
+</body>
+</html>

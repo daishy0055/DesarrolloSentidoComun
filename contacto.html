@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/example.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="email-container">
+                <a href="mailto:tucorreo@ejemplo.com" class="email-link" id="emailLink">
+                    <svg class="gmail-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 18h-2V9.25L12 13 6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                    </svg>
+                    <span class="email-text">daianasaguilar5555@gmail.com</span>
+                    <div class="hover-effect"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animación de revelado del email
+        function animateEmail() {
+            const emailLink = document.getElementById('emailLink');
+            const emailText = emailLink.querySelector('.email-text');
+            const originalText = emailText.textContent;
+            emailText.textContent = '';
+            
+            let i = 0;
+            const animation = setInterval(() => {
+                emailText.textContent += originalText[i];
+                i++;
+                if(i >= originalText.length) clearInterval(animation);
+            }, 50);
+        }
+
+        // Animación al hacer hover
+        document.getElementById('emailLink').addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.05)';
+            this.querySelector('.hover-effect').style.width = '100%';
+            this.querySelector('.gmail-icon').style.fill = '#2dd4bf';
+        });
+
+        document.getElementById('emailLink').addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+            this.querySelector('.hover-effect').style.width = '0';
+            this.querySelector('.gmail-icon').style.fill = '#fff';
+        });
+
+        // Iniciar animación al cargar
+        window.addEventListener('load', animateEmail);
+
+        // Animación al aparecer en el viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.contact-container').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

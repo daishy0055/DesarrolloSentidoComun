@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Servicios Profesionales</title>
+  <!-- Enlaza el CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Íconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container">
+      <!-- Botón menú hamburguesa (fijo en pantallas pequeñas) -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <!-- Logo centrado -->
+      <div class="logo">OC</div>
+      <!-- Menú principal -->
+      <nav>
+        <ul>
+          <!-- Ajusta los enlaces si tu archivo principal se llama distinto -->
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#portafolio">Servicios</a></li>
+          <li><a href="index.html#vision">Visión y Misión</a></li>
+          <li><a href="index.html#logros">Logros</a></li>
+          <li><a href="index.html#clientes">Clientes</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Barra de progreso (scroll) -->
+      <div class="scroll-progress"></div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE SERVICIOS -->
+  <section class="services">
+    <div class="section-title">
+      <h2>Nuestros Servicios</h2>
+      <p>Innovación tecnológica a tu alcance</p>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Tarjeta 1 -->
+      <div class="service-card">
+        <i class="fas fa-code service-icon"></i>
+        <h3>Desarrollo</h3>
+        <p>Soluciones software a medida utilizando las últimas tecnologías y metodologías ágiles.</p>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="service-card">
+        <i class="fas fa-chart-line service-icon"></i>
+        <h3>Consultoría</h3>
+        <p>Optimización de procesos y estrategias tecnológicas para maximizar tu ROI.</p>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="service-card">
+        <i class="fas fa-shield-alt service-icon"></i>
+        <h3>Auditoría</h3>
+        <p>Evaluación integral de sistemas y seguridad para garantizar el cumplimiento de estándares.</p>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="service-card">
+        <i class="fas fa-cloud service-icon"></i>
+        <h3>Software como Servicio</h3>
+        <p>Plataformas cloud escalables con mantenimiento y actualizaciones incluidas.</p>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="service-card">
+        <i class="fas fa-key service-icon"></i>
+        <h3>Venta de Licencias</h3>
+        <p>Distribución autorizada de software empresarial con soporte técnico especializado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; <span id="current-year"></span> Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- =========================
+       SCRIPTS (JavaScript dentro del HTML)
+       ========================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animación del título (delay de 300ms)
+      setTimeout(function() {
+        var sectionTitle = document.querySelector('.section-title');
+        if(sectionTitle) {
+          sectionTitle.style.opacity = '1';
+          sectionTitle.style.transform = 'translateY(0)';
+        }
+      }, 300);
+
+      // Observer para hacer aparecer las tarjetas
+      var cards = document.querySelectorAll('.service-card');
+      var cardObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach(function(card) {
+        cardObserver.observe(card);
+      });
+
+      // Efecto de "iluminación" al mover el mouse sobre las tarjetas
+      cards.forEach(function(card) {
+        card.addEventListener('mousemove', function(e) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', x + 'px');
+          card.style.setProperty('--mouse-y', y + 'px');
+        });
+      });
+
+      // Barra de progreso en el header (scroll)
+      var scrollProgress = document.querySelector('.scroll-progress');
+      window.addEventListener('scroll', function() {
+        var windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (window.scrollY / windowHeight) * 100;
+        if(scrollProgress) {
+          scrollProgress.style.width = scrolled + '%';
+        }
+      });
+
+      // Año actual en el footer
+      var yearSpan = document.getElementById('current-year');
+      if(yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Ocultar/mostrar navbar al hacer scroll
+      var lastScroll = 0;
+      var navbar = document.querySelector('#header');
+      window.addEventListener('scroll', function() {
+        var currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          navbar.style.top = '-80px';
+        } else {
+          navbar.style.top = '0';
+        }
+        lastScroll = currentScroll;
+      });
+
+      // Funcionalidad del menú hamburguesa
+      var hamburger = document.querySelector('.hamburger');
+      var navUl = document.querySelector('nav ul');
+      var navLinks = document.querySelectorAll('nav ul li a');
+
+      if(hamburger && navUl) {
+        hamburger.addEventListener('click', function() {
+          navUl.classList.toggle('active');
+          hamburger.classList.toggle('open');
+        });
+      }
+
+      // Cerrar el menú al hacer clic en un enlace
+      if(navLinks) {
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            navUl.classList.remove('active');
+            hamburger.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
